@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Dockerfile проекты
 
 - [Привет, Docker! 🐳](/content/Docker/DockerFile/hello-world.md)
@@ -8,3 +9,7 @@
 - [Консольное приложение на C++ и FTXUI](/content/Docker/DockerFile/ftxui.md)
 - [Wow - консольное псевдографическое приложение на C++ и FTXUI](/content/Docker/DockerFile/ftxui_wow.md)
 - [Приложение на C++ и FLTK](/content/Docker/Dockerfile/cpp_fltk.md)
+=======
+## Провекты для по работе с Dockerfile
+
+>>>>>>> a4de360e5e72a86205356b7019856e9b7c2f1d73

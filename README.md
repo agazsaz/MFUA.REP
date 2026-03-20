@@ -33,12 +33,7 @@
 1. Персональный компьютер с монитором (лучше два монитора) и аудиогарнитура. Хороший интернет
 1. Для изучения **IT** технологий лучше использовать какой-нибудь **Linux**, например [Альт Образование 11](https://www.basealt.ru/alt-education)
 1. Для пользователей **Linux** [инструкция по получению и настройке Альт Линукс Образование 11](/content/Linux/README.md)
-<<<<<<< HEAD
 1. Для пользователей **Windows 10/11** установку приложений в Windows рекомендуется использовать [**WinGet**](https://learn.microsoft.com/ru-ru/windows/package-manager/winget/)! Проверить у себя в **PowerShell** установленный **WinGet** командой `winget --info`. Если не установлен, то:
-=======
-1. Для пользователей **Windows 10/11**
-1. Для установки приложений в Windows рекомендуется использовать [**WinGet**](https://learn.microsoft.com/ru-ru/windows/package-manager/winget/)! Проверить у себя в **PowerShell** установленный **WinGet** командой `winget --info`. Если не установлен, то:
->>>>>>> a4de360e5e72a86205356b7019856e9b7c2f1d73
     - Установить [WinGet (Windows Package Manager)](https://apps.microsoft.com/detail/9nblggh4nns1?hl=ru-RU&gl=RU) или [с Github](https://github.com/microsoft/winget-cli/releases)
 1. Приложение [Teams](https://teams.microsoft.com/v2/) или браузер [Edge](https://www.microsoft.com/ru-ru/edge/download?form=MA13FW) или в **PowerShell** - `winget install Microsoft.Teams` и `winget install Microsoft.Edge`
 1. **Git** (Git-Bash) [Git-Bash](https://git-scm.com/) или в **PowerShell** - `winget install Git.Git`
@@ -56,12 +51,12 @@
     - [Альт Образование 11 для виртуальной машины](https://download.basealt.ru/pub/distributions/ALTLinux/p11/images/education/x86_64/alt-education-11.0-x86_64.iso) - пока не обязательно!
 1. Нейросети [DeepSeek](https://chat.deepseek.com/) и [Cursor](https://cursor.com/)
 
-> Периодически следует обновлять все установленные пользователем приложения. Это удобней делать через **PowerShell** командой ` winget upgrade --all`
+> Периодически следует обновлять все установленные пользователем приложения. Это удобней делать через **PowerShell** командой `winget upgrade --all`
 
-Кроме этого, с помощью **WinGet** можно одновременно устанавливать сразу несколько выбранных приложени, например так:
+Кроме этого, с помощью **WinGet** можно одновременно устанавливать сразу несколько выбранных приложений, например:
 
 ```shell
-winget install Microsoft.Teams Git.Git Microsoft.VisualStudioCode LLVM.LLVM
+winget install Microsoft.Teams Git.Git Microsoft.VisualStudioCode Docker.DockerDesktop LLVM.LLVM
 ```
 
 ---
@@ -85,6 +80,7 @@ git config --global user.name "Rosa"
 git config --global user.email "rosa@mail.ru"
 ```
 > где вместо `rosa@mail.ru` - ваша почта
+
 ### [Подробней о Git >>>](/content/Git/README.md)
 
 
@@ -121,7 +117,7 @@ git config --global user.email "rosa@mail.ru"
             - `sl`
             - `ascii -d`
             - `inxi -F`
-    - (Не обязательно!) Если обновления **Ubuntu** завершаться ошибкой, то надо в **Windows PowerShell** (Администратор) задать версию **WSL 2** по умолчанию: `wsl --set-default-version 2`
+    - **(Не обязательно!)** Если обновления **Ubuntu** завершаться ошибкой, то надо в **Windows PowerShell** (Администратор) задать версию **WSL 2** по умолчанию: `wsl --set-default-version 2`
 
 > Если компьютер не тянет для **WSL 2.0** и **Docker**, то можно попробовать выполнять задачи в [**Codespace**](https://github.com/features/codespaces) (но не желательно, т.к. очень ограниченный функционал!)
 
@@ -141,7 +137,9 @@ git config --global user.email "rosa@mail.ru"
 
 > Если компьютер не тянет в **WSL 2.0** и **Docker**, то можно ограничется [Codespace](https://github.com/features/codespaces) (но не желательно, т.к. очень ограниченный функционал!)
 
-[Уроки по **Docker** для начинающих](/content/Docker/README.md)
+> Для лучшего выполнения создания и запуска контейнеров можно использовать установленную в **WSL** систему **Ubuntu**, которую можно вызвать из **Главного меню**. Чтобы **VS Code** мог работать с **Ubuntu**, нужно в нём установить расширение **WSL** и запускать **VS Code** из командной строки **Ubuntu** командой `.code`
+
+[Образовательные материалы по **Docker** для начинающих](/content/Docker/README.md)
 
 ---
 
@@ -178,6 +176,7 @@ git config --global user.email "rosa@mail.ru"
 - [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
   **Markdown Syntax Highlighting** - подсветка синтаксиса в **Mermaid**
 - [Mermaid Markdown Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=bpruitt-goddard.mermaid-markdown-syntax-highlighting)
+- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
 
 Открыть и закрыть встроенный в **VS Code** терминал по **Ctrl+~**
 
@@ -203,3 +202,5 @@ git config --global user.email "rosa@mail.ru"
 * [Вопросы к экзамену по дисциплине «ОБЕСПЕЧЕНИЕ КАЧЕСТВА ФУНКЦИОНИРОВАНИЯ КОМПЬЮТЕРНЫХ СИСТЕМ»](/content/Ensuring_quality_computer_systems_functioning/questions.md)
 * [Вопросы к экзамену по дисциплине "Инструментальные средства разработки ПО"](/content/SoftwareDevelopmentTools/questions.md)
 * [Вопросы к экзамену по дисциплине "Информационные технологии"](/content/IT/questions.md)
+
+> Если вы обнаружили ошибку в этом тексте - сообщите пожалуйста автору!

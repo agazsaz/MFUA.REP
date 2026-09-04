@@ -430,10 +430,6 @@ docker container prune
 ```shell
 docker rm $(docker ps -aq)
 ```
-Артефакты и свободное место:
-```shell
-docker buildx du
-```
 
 ### Prune - Удаляйте ненужные контейнеры чтобы не засорять ваш Docker!
 

@@ -35,11 +35,9 @@ history
 !!
 ```
 
-Автодополнение команд выполнятся по `TAB`
-
 Прервать выполнение запущенной команды
 
-`Ctrl+C`
+**Ctrl+C**
 
 ### Файловые операции
 
@@ -62,10 +60,6 @@ ls dir_name
 ```shell
 ll
 ```
-или
-```shell
-ls --all
-```
 
 Показать подробное содержимое указанного каталога
 ```shell
@@ -82,7 +76,7 @@ tree
 cd ~
 ```
 
-Вернуться в предыдущую папку
+Вернуться обратно
 ```shell
 cd -
 ```
@@ -95,7 +89,6 @@ cd -
 ```shell
 cd dir_name
 ```
-где `dir_name` - это имя нужного вам каталога
 
 Выйти из текущего каталога на 1 шаг вверх
 ```shell
@@ -177,15 +170,18 @@ date
 ```shell
 touch emptyFile.txt
 ```
+
 **Nano**
 ```shell
 nano file_name.txt
 ```
+
 Сохранить по **Ctrl+S**, выйти по **Ctrl+X**
 
 ```shell
 micro file_name.txt
 ```
+
 Сохранить по **Ctrl+S**, выйти по **Ctrl+Q**
 
 Запустить Python-скрипт
@@ -196,13 +192,11 @@ python3 hello.py
 Программа на C++
 ```cpp
 #include <iostream>
-//#include <unistd.h>
-#include <thread>
+#include <unistd.h>
 
 int main() {
 	puts("Hello\nЖдём 2 ~сек...");
-	//usleep(2000'000);
-	std::this_thread::sleep_for(std::chrono::seconds(2));
+	usleep(2000'000);
 	return 0;
 }
 ```
@@ -210,18 +204,22 @@ int main() {
 ```shell
 g++ main.cpp -o main.bin
 ```
+
 Запустить бинарный файл
 ```shell
 ./main.bin
 ```
+
 Показать используемые программой библиотеки
 ```shell
 ldd ./main.bin
 ```
+
 Покать время выполнения скрипта или программы
 ```shell
 time ./main.bin
 ```
+
 Показать таблицу ASCII
 ```shell
 ascii -d
@@ -235,14 +233,17 @@ ascii -d
 ```shell
 touch {1..10}.txt
 ```
+
 Создать пустой каталог
 ```shell
 mkdir dir_name
 ```
+
 Создать много папок одновременно
 ```shell
 mkdir folder{1..3}
 ```
+
 Удалить группу файлов по шаблону
 ```shell
 rm -r folder{1..5}
@@ -260,18 +261,22 @@ project/
 ├── fonts/
 └── pages/
 ```
+
 одной командой
 ```shell
 mkdir -p project/{css,js,img/ico,fonts,pages}
-```
+```simple_flask_app
+
 Копировать файл в указанную папку
 ```shell
 cp file1.txt folder1
 ```
+
 Переместить файл в указанную папку
 ```shell
 mv file2.txt folder2
 ```
+
 Переименовать файл
 ```shell
 mv file3.txt fileThree.txt
@@ -284,6 +289,7 @@ mv file3.txt fileThree.txt
 ```shell
 rm -i deleteFile
 ```
+
 Удаление каталога
 ```shell
 rm -ri dir_name
@@ -306,9 +312,9 @@ rm -i {1..10}.txt
 hostname
 ```
 
-Показать локальный ip
+Показать ip
 ```shell
-hostname -i
+hostname -I
 ```
 
 или
@@ -335,7 +341,6 @@ ping 8.8.8.8
 ```shell
 ping ya.ru
 ```
-чтобы прервать выполение текущей команды, выполните `Ctrl+C`
 
 Пинг заданное кол-во раз
 ```shell

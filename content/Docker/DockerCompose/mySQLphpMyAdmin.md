@@ -161,11 +161,6 @@ docker compose down -v
 
 > ### Для полного удаления этого проекта, достаточно остановить его через `docker compose down` или `docker compose down --volumes`, удалить docker-образ, после чего удалить каталог проекта `mysql-pma-app`
 
-Удалить образ проекта
-```shell
-docker image rm
-```
-
 Выходим из каталога проекта
 ```shell
 cd ..
